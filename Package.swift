@@ -6,6 +6,13 @@ let package = Package(
     targets: [
         .executableTarget(
             name: "SwiftPOC",
-            path: "Sources")
+            path: "Sources"
+        ),
+        .testTarget(
+            name: "SwiftPOCTests",
+            dependencies: ["SwiftPOC"],
+            path: "Tests/SwiftPOCTests"
+        )
     ]
 )
+
